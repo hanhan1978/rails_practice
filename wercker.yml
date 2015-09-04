@@ -14,6 +14,11 @@ build:
     - script:
         name: install mecab 
         code: |
+            sudo add-apt-repository "deb http://us.archive.ubuntu.com/ubuntu/ trusty universe multiverse"
+            sudo add-apt-repository "deb http://us.archive.ubuntu.com/ubuntu/ trusty-updates universe multiverse"
+            sudo apt-get update -y
+            sudo apt-cache showpkg mecab
+            sudo apt-cache showpkg libmecab-dev
             sudo apt-get install mecab libmecab-dev mecab-ipadic
     - script:
         name: run migration 
