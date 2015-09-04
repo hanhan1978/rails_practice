@@ -11,6 +11,3 @@ build:
             echo "ruby version $(ruby --version) running!"
             echo "from location $(which ruby)"
             echo -p "gem list: $(gem list)"
-  after-steps:
-    - wantedly/pretty-slack-notify:
-        webhook_url: $SLACK_WEBHOOK_URL
