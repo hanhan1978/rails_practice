@@ -12,5 +12,11 @@ build:
             echo "from location $(which ruby)"
             echo -p "gem list: $(gem list)"
     - script:
+        name: install mecab 
+        code: |
+            sudo apt-get install mecab=0.996-1.1 -y
+            sudo apt-get install mecab-ipadic-utf8 -y
+            sudo apt-get install libmecab-dev=0.996-1.1 -y
+    - script:
         name: run migration 
         code: bundle exec rake db:migrate 
