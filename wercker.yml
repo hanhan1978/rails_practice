@@ -20,6 +20,7 @@ build:
             sudo apt-cache showpkg mecab
             sudo apt-cache showpkg libmecab-dev
             sudo apt-get install mecab libmecab-dev mecab-ipadic
+            ls -la /usr/lib
     - script:
         name: run migration 
         code: bundle exec rake db:migrate 
